@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D Dashboard Weekly Report</title>
+</head>
+<style>
+    td {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+    }
+    
+    table {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <h2>R&D Dashboard Weekly Usage Report</h2>
+    <h4>Week Number: {{ weekNumber }}</h4>
+    <table>
+        <tr>
+            <th>Users</th>
+            <th>Role</th>
+            <th>Department</th>
+            <th>Weekly Hits</th>
+            <th>Week</th>
+        </tr>
+        {% for eachData in data.items() %}
+        <tr>
+            <td>{{ eachData[0] }}</td>
+            <td>Not known</td>
+            <td>Not known</td>
+            <td>{{ eachData[1] }}</td>
+            <td>{{ week }}</td>
+        </tr>
+        {% endfor %} </table>
+</body>
+
+</html>
